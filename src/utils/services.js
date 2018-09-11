@@ -18,7 +18,7 @@ ReactDOM.render(c,div)*/
 
 axios.interceptors.request.use(
     config => {
-        let reg = new RegExp("(cms|st)\.(haiziwang|cekid)")
+        let reg = new RegExp("(cms|st)\.(baidu|cekid)")
         reg.test(config.url)?config.withCredentials=false:config.withCredentials=true;
         Toast.info('正在加载！')
         return config;
